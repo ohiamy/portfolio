@@ -80,14 +80,14 @@
 
 [data-theme="dark"] {
   --color-bg: #1C1A18;
-  --color-nav-scrolled: rgba(28, 26, 24, 0.88);
+  --color-nav-scrolled: #1c1a1888;
   --color-surface: #252320;
   --color-surface-elevated: #2E2B27;
-  --color-text-primary: #F5F0E8;
-  --color-text-secondary: #C4B8A8;
-  --color-text-muted: #8A7E72;
-  --color-accent: #8FB894;
-  --color-accent-hover: #A8CCB0;
+  --color-text-primary: #ebf0dd;
+  --color-text-secondary: #dee5cf;
+  --color-text-muted: #bfc3b3;
+  --color-accent: #a9bd7d;
+  --color-accent-hover: #dee5cf;
   --color-accent-subtle: #1E2E20;
   --color-border: #3A352F;
   --color-on-accent: #1C1A18;
