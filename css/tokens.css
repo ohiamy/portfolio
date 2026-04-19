@@ -3,7 +3,7 @@
 :root {
   /* Colors — Light theme */
   --color-bg: #FFFDFA;
-  --color-nav-bg: #FFFFFF;
+  --color-nav-bg: #FFFDFA;
   --color-nav-scrolled: #EBF0E088;
   --color-surface: #F8FAF3;
   --color-surface-elevated: #FFFFFF;
@@ -67,6 +67,7 @@
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 250ms ease;
+  --transition-slow:320ms ease;
 
   /* Layout */
   --container-content: 740px;

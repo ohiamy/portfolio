@@ -2,16 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
   // Scroll-triggered nav shadow
   const nav = document.querySelector('.site-nav');
   if (nav) {
-    const observer = new IntersectionObserver(
-      function (entries) {
-        nav.classList.toggle('scrolled', !entries[0].isIntersecting);
-      },
-      { rootMargin: '-' + getComputedStyle(document.documentElement).getPropertyValue('--nav-height').trim() + ' 0px 0px 0px' }
-    );
-    const sentinel = document.createElement('div');
-    sentinel.style.cssText = 'position:absolute;top:0;height:1px;width:1px;pointer-events:none';
-    document.body.prepend(sentinel);
-    observer.observe(sentinel);
+       function updateNav() {
+      nav.classList.toggle('scrolled', window.scrollY > 10);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
   }
 
   // Mobile nav toggle

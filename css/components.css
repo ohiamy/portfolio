@@ -10,7 +10,7 @@
   height: var(--nav-height);
   background: var(--color-nav-bg);
   border-bottom: 1px solid transparent;
-  transition: border-color var(--transition-normal), backdrop-filter var(--transition-normal);
+  transition: border-color var(--transition-slow), backdrop-filter var(--transition-slow), background var(--transition-slow);
 }
 .site-nav.scrolled {
   border-color: var(--color-border);
