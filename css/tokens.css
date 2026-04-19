@@ -4,16 +4,16 @@
   /* Colors — Light theme */
   --color-bg: #FFFDFA;
   --color-nav-bg: #FFFFFF;
-  --color-nav-scrolled: #EBF0E0e0;
+  --color-nav-scrolled: #EBF0E088;
   --color-surface: #F8FAF3;
   --color-surface-elevated: #FFFFFF;
   --color-text-primary: #2C1A0E;
-  --color-text-secondary: #6B5344;
-  --color-text-muted: #9C8070;
+  --color-text-secondary: #5C6548;
+  --color-text-muted: #6E7F49;
   --color-accent: #6E7F49;
   --color-accent-hover: #5C6548;
   --color-accent-subtle: #fff; /* F2F3EE*/
-  --color-border: #EBF0E0;
+  --color-border: #dee5cf;
   --color-on-accent: #FFFFFF;
   --color-error: #C0392B;
 
