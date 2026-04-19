@@ -1,0 +1,322 @@
+/* Case study page layout */
+
+/* ─── Hero ────────────────────────────────────────────────── */
+.cs-hero {
+  padding: var(--space-20) 0 var(--space-12);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cs-hero-inner {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.cs-breadcrumb {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.cs-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+.cs-breadcrumb a:hover { color: var(--color-accent); }
+
+.cs-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.cs-title {
+  font-size: clamp(1.75rem, 4vw, var(--text-4xl));
+  line-height: 1.15;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
+  max-width: 800px;
+}
+
+.cs-summary {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  max-width: 640px;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-10);
+}
+
+/* Metadata strip */
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.cs-meta-item dt {
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-1);
+}
+.cs-meta-item dd {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--weight-medium);
+}
+
+/* ─── Body layout ─────────────────────────────────────────── */
+.cs-body {
+  max-width: var(--container-content);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
+}
+
+/* Sections */
+.cs-section {
+  margin-bottom: var(--space-16);
+}
+
+.cs-section-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+}
+
+.cs-section h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+}
+
+.cs-section p {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
+}
+
+.cs-section ul {
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Stat callouts */
+.cs-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin: var(--space-8) 0;
+}
+.cs-stat {
+  flex: 1;
+  min-width: 140px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  text-align: center;
+}
+.cs-stat-value {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.cs-stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Pull quote */
+.cs-quote {
+  border-left: 3px solid var(--color-accent);
+  padding: var(--space-6) var(--space-8);
+  margin: var(--space-8) 0;
+  background: var(--color-surface);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.cs-quote p {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-style: italic;
+  color: var(--color-text-primary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-2);
+}
+.cs-quote cite {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-style: normal;
+}
+
+/* ─── Next / Prev navigation ──────────────────────────────── */
+.cs-nav {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-8);
+  margin-top: var(--space-16);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.cs-nav-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-decoration: none;
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+  flex: 1;
+  min-width: 200px;
+}
+.cs-nav-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+.cs-nav-link--next { text-align: right; }
+
+.cs-nav-dir {
+  font-size: 0.75rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+.cs-nav-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  color: var(--color-text-primary);
+}
+
+/* ─── Auth overlay ────────────────────────────────────────── */
+#auth-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+}
+
+.auth-box {
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-lock {
+  width: 56px;
+  height: 56px;
+  background: var(--color-accent-subtle);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-6);
+  color: var(--color-accent);
+}
+.auth-lock svg { width: 24px; height: 24px; }
+
+.auth-box h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+}
+
+.auth-box > p {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+#auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+#auth-password {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-elevated);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+#auth-password::placeholder {
+  letter-spacing: normal;
+  color: var(--color-text-muted);
+}
+#auth-password:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+#auth-error {
+  font-size: var(--text-sm);
+  color: var(--color-error);
+  min-height: 1.25em;
+  margin: 0;
+}
+
+#auth-form .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.auth-back-link {
+  display: inline-block;
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+.auth-back-link:hover { color: var(--color-accent); }
+
+/* Shake animation for wrong password */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px); }
+  40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+}
+#auth-password.shake {
+  animation: shake 0.4s ease;
+  border-color: var(--color-error);
+}
+
+@media (max-width: 768px) {
+  .cs-meta { gap: var(--space-6); }
+  .cs-stats { flex-direction: column; }
+  .cs-stat { text-align: left; }
+  .cs-body { padding: var(--space-10) var(--space-4); }
+}

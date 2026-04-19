@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signal Over Noise — Amy Wong, UX Designer</title>
+  <meta name="description" content="How I redesigned a B2B analytics dashboard to reduce task completion time by 60%.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/case-study.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Password gate overlay — removed by auth.js on correct entry -->
+  <div id="auth-overlay" role="dialog" aria-modal="true" aria-label="Password protected content" tabindex="-1">
+    <div class="auth-box">
+      <div class="auth-lock" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <h2>NDA Protected</h2>
+      <p>This case study contains confidential client work shared under NDA. Enter the password to view — available to hiring managers on request.</p>
+      <form id="auth-form" novalidate>
+        <label for="auth-password" class="sr-only">Password</label>
+        <input id="auth-password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+        <p id="auth-error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="btn btn--primary">Unlock Case Study</button>
+      </form>
+      <a href="index.html" class="auth-back-link">← Back to Work</a>
+    </div>
+  </div>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Work</a></li>
+          <li><a href="../personal/index.html">Personal</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="index.html">Work</a></li>
+    <li><a href="../personal/index.html">Personal</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <p class="cs-breadcrumb">
+          <a href="index.html">Work</a>
+          <span aria-hidden="true">›</span>
+          <span>Analytics Dashboard</span>
+        </p>
+        <span class="cs-label">Lumis Analytics · B2B SaaS · 2023</span>
+        <h1 class="cs-title">Signal Over Noise: Redesigning a B2B Analytics Dashboard</h1>
+        <p class="cs-summary">Power users were spending 8+ minutes completing core analytical tasks. I led a research-intensive redesign that introduced adaptive information architecture, progressive disclosure, and a saved-views system — cutting task time by 60%.</p>
+        <dl class="cs-meta">
+          <div class="cs-meta-item"><dt>My Role</dt><dd>Lead UX Designer</dd></div>
+          <div class="cs-meta-item"><dt>Timeline</dt><dd>6 months (2023)</dd></div>
+          <div class="cs-meta-item"><dt>Team</dt><dd>1 Designer, 2 PMs, 8 Engineers</dd></div>
+          <div class="cs-meta-item"><dt>Tools</dt><dd>Figma, Maze, Hotjar, Looker</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <!-- Overview -->
+      <section class="cs-section" aria-labelledby="overview-heading">
+        <span class="cs-section-label">Overview</span>
+        <h2 id="overview-heading">The problem</h2>
+        <p>Lumis Analytics is a B2B SaaS platform serving data teams at mid-market and enterprise companies. After a round of enterprise expansion, the customer success team flagged a troubling pattern: power users — the people who lived in the product daily — were churning at a higher rate than average users. Exit survey analysis revealed the culprit: the dashboard experience.</p>
+        <p>Users described it as "overwhelming," "cluttered," and "slow to navigate." Hotjar recordings confirmed the feeling — users were spending 8–12 minutes per session completing tasks that should take under 2 minutes. The product had grown organically over four years, and the information architecture had never been revisited holistically.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-value">8 min</span>
+            <span class="cs-stat-label">Average time to complete a core analytical task (baseline)</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">38%</span>
+            <span class="cs-stat-label">Power users citing UX as a reason for considering alternatives</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">$1.8M</span>
+            <span class="cs-stat-label">ARR at risk from churning power-user accounts</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research -->
+      <section class="cs-section" aria-labelledby="research-heading">
+        <span class="cs-section-label">Research</span>
+        <h2 id="research-heading">Understanding how power users think</h2>
+        <p>I designed a multi-method research plan to understand both the surface-level friction and the underlying mental models that weren't being served.</p>
+        <ul>
+          <li><strong>Task analysis sessions (n=18):</strong> Moderated sessions where I gave participants realistic tasks and observed their navigation patterns, hesitations, and workarounds.</li>
+          <li><strong>Eye-tracking study (n=8):</strong> Partnered with an external research lab to run eye-tracking on key dashboard views. Results revealed 60% of visual attention was focused on chrome/navigation rather than data.</li>
+          <li><strong>6-week diary study (n=12):</strong> Participants submitted brief video reports of their daily Lumis usage. This surfaced recurring pain points invisible in moderated sessions.</li>
+          <li><strong>Competitive audit:</strong> Analyzed 6 competing tools to identify dashboard patterns that were becoming user expectations.</li>
+        </ul>
+
+        <div class="cs-quote">
+          <p>"I know the answer is in here somewhere. I just can't find it without clicking through five menus every time."</p>
+          <cite>— Participant, Task Analysis Session #4</cite>
+        </div>
+
+        <p>Key insight: power users weren't struggling because they didn't understand the product — they were experts. They were struggling because the interface forced them to re-navigate the same paths repeatedly, with no way to save their work context between sessions.</p>
+
+        <div class="img-placeholder" role="img" aria-label="Affinity diagram from research synthesis — themes: navigation friction, context switching, cognitive load, missing shortcuts">
+          Image placeholder: Research synthesis affinity map
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="cs-section" aria-labelledby="process-heading">
+        <span class="cs-section-label">Design Process</span>
+        <h2 id="process-heading">From insight to system</h2>
+        <p>Research synthesis revealed three root causes: (1) a flat navigation structure that treated all features as equally important, (2) no persistent workspace concept — every session started from scratch, and (3) data density without hierarchy, making it hard to distinguish signal from noise.</p>
+        <p>I ran a two-week design sprint with the PM team to generate concepts, then conducted four rounds of concept testing with power users before moving to high-fidelity.</p>
+
+        <h3>The key interventions</h3>
+        <ul>
+          <li><strong>Adaptive navigation:</strong> Surfaces the user's most-used reports and views at the top level. Infrequently-used features are still accessible but tucked behind a single "More" menu.</li>
+          <li><strong>Saved views system:</strong> Users can name and pin any configured dashboard state — filters, date ranges, chart types — and return to it in one click. This directly addressed the "re-navigate every time" pattern from research.</li>
+          <li><strong>Progressive complexity:</strong> Default views show the most critical KPIs. Advanced breakdowns are available via expandable panels — visible when needed, hidden when not.</li>
+          <li><strong>Keyboard navigation:</strong> Power users overwhelmingly preferred keyboard shortcuts. We shipped a command palette (Cmd+K) covering the 20 most common actions.</li>
+        </ul>
+
+        <div class="img-placeholder" role="img" aria-label="Wireframe progression from sketches to mid-fidelity layout showing the saved views panel and adaptive navigation">
+          Image placeholder: Wireframe progression
+        </div>
+      </section>
+
+      <!-- Solution -->
+      <section class="cs-section" aria-labelledby="solution-heading">
+        <span class="cs-section-label">Solution</span>
+        <h2 id="solution-heading">The redesigned dashboard</h2>
+        <p>The final design introduced a workspace metaphor — users now have a persistent context (their saved views and recently accessed reports) as the home base, instead of arriving at an empty dashboard each session.</p>
+        <p>Navigation was restructured around job-to-be-done categories rather than feature categories, which matched the mental models surfaced in research much more closely.</p>
+
+        <div class="img-placeholder" role="img" aria-label="High-fidelity mockup of the redesigned dashboard home with saved views sidebar, adaptive navigation, and clean data hierarchy">
+          Image placeholder: Final dashboard design — hero view
+        </div>
+
+        <div class="img-placeholder" role="img" aria-label="Command palette (Cmd+K) in context, showing suggested actions and keyboard shortcuts">
+          Image placeholder: Command palette component
+        </div>
+      </section>
+
+      <!-- Outcomes -->
+      <section class="cs-section" aria-labelledby="outcomes-heading">
+        <span class="cs-section-label">Outcomes</span>
+        <h2 id="outcomes-heading">Results after launch</h2>
+        <p>The redesign shipped in Q3 2023. We measured against baseline metrics from the research phase.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-value">−60%</span>
+            <span class="cs-stat-label">Task completion time (8 min → 3.2 min average)</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">+45%</span>
+            <span class="cs-stat-label">Feature discovery rate for advanced analytics tools</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">−12%</span>
+            <span class="cs-stat-label">Power-user churn in the 6 months post-launch</span>
+          </div>
+        </div>
+
+        <p>The saved-views feature became the highest-rated capability in the next NPS survey cycle, with 84% of power users reporting it as "essential to my daily workflow." The command palette was adopted by 62% of active users within 90 days of launch.</p>
+        <p>This project reinforced for me that the difference between an okay redesign and a transformative one is depth of research. The saved-views insight only surfaced during the diary study — a methodology I advocated for when the PM team initially pushed for a lighter research phase.</p>
+      </section>
+
+      <!-- Next/Prev -->
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="enterprise-onboarding.html" class="cs-nav-link">
+          <span class="cs-nav-dir">← Previous</span>
+          <span class="cs-nav-title">From Chaos to Clarity: Enterprise Onboarding</span>
+        </a>
+        <a href="design-system.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-dir">Next →</span>
+          <span class="cs-nav-title">One Language: Design System</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

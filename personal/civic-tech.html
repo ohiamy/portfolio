@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neighborhood as Network — Amy Wong, UX Designer</title>
+  <meta name="description" content="A speculative civic tech design sprint exploring local participation and neighborhood connection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/case-study.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="../work/index.html">Work</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Personal</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="../work/index.html">Work</a></li>
+    <li><a href="index.html">Personal</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <p class="cs-breadcrumb"><a href="index.html">Personal</a> <span aria-hidden="true">›</span> <span>Civic Tech</span></p>
+        <span class="cs-label">Self-initiated · Speculative Design · 2023</span>
+        <h1 class="cs-title">Neighborhood as Network: Speculative Civic Tech</h1>
+        <p class="cs-summary">An 8-week self-initiated design sprint exploring what local civic participation could look like if all its fragmented touchpoints — voting, service requests, neighborhood alerts, community forums — lived in one coherent experience.</p>
+        <dl class="cs-meta">
+          <div class="cs-meta-item"><dt>Type</dt><dd>Speculative / Self-initiated</dd></div>
+          <div class="cs-meta-item"><dt>Timeline</dt><dd>8 weeks (2023)</dd></div>
+          <div class="cs-meta-item"><dt>Methods</dt><dd>Co-design, Secondary Research, Prototyping</dd></div>
+          <div class="cs-meta-item"><dt>Tools</dt><dd>Figma, Miro, Notion</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <section class="cs-section" aria-labelledby="framing-heading">
+        <span class="cs-section-label">The Framing</span>
+        <h2 id="framing-heading">Why civic participation is so low</h2>
+        <p>Less than 10% of residents in most U.S. cities vote in local elections — the ones that have the most direct impact on their daily lives. The issue isn't apathy; it's fragmentation. Reporting a pothole happens on one app. Attending a neighborhood meeting requires a different sign-up. Tracking a city council vote happens on a website built in 2009.</p>
+        <p>I wanted to explore: what if there was a single "civic layer" for your neighborhood — a platform that unified all the touchpoints of local participation into one coherent, low-friction experience?</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="research-heading">
+        <span class="cs-section-label">Approach</span>
+        <h2 id="research-heading">Co-design with real neighbors</h2>
+        <p>I recruited 3 neighborhood groups in my city: a local block association, a parent group from an elementary school, and a tenants' union. I ran 2-hour co-design sessions with each group — using mapping exercises to surface what civic participation meant to them and where the biggest friction points were.</p>
+        <p>Secondary research covered existing platforms (Nextdoor, SeeClickFix, Decidim) and academic literature on civic technology. The gap was clear: most tools optimize for reporting or consuming information, not for sustained participation and relationship-building.</p>
+
+        <div class="cs-quote">
+          <p>"I want to know what's happening on my block, not what's happening in the whole city. I want to feel like my input actually goes somewhere."</p>
+          <cite>— Co-design participant, block association member</cite>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="design-heading">
+        <span class="cs-section-label">Design Direction</span>
+        <h2 id="design-heading">A neighborhood-first architecture</h2>
+        <p>The concept centered on a "neighborhood radius" — a default view scoped to the 6-block radius around your home address. Everything is hyperlocal first, with optional expansion to the city level. The three core surfaces were:</p>
+        <ul>
+          <li><strong>The Feed:</strong> A stream of neighborhood events, service requests, community proposals, and local meeting notes — all contributed or verified by residents and civic staff alike.</li>
+          <li><strong>The Map:</strong> A visual layer showing open service requests, recent repairs, planned construction, and community resources — pulling from city open data APIs.</li>
+          <li><strong>Your Voice:</strong> A participatory budgeting-style interface where residents can propose, discuss, and vote on hyperlocal improvements — with a live tracker showing how their input influenced a decision.</li>
+        </ul>
+
+        <div class="img-placeholder" role="img" aria-label="Speculative prototype: neighborhood feed with hyperlocal filtering, map overlay with civic data, and participatory voting interface">
+          Image placeholder: Speculative prototype screens
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="outcomes-heading">
+        <span class="cs-section-label">Outcomes</span>
+        <h2 id="outcomes-heading">What came next</h2>
+        <p>I tested the prototype with 22 residents across the three co-design groups. The "Your Voice" feature had the strongest response — participants described it as "the first time I could imagine my input actually mattering." The Map view resonated with parents and older residents; the Feed was most valued by people new to the neighborhood.</p>
+        <p>I submitted the concept to my city's civic innovation lab and was invited to present at a local civic tech meetup. The project is open — if you're working on participatory civic tools, I'd love to connect.</p>
+      </section>
+
+      <nav class="cs-nav" aria-label="Project navigation">
+        <a href="quiet-app.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-dir">Next →</span>
+          <span class="cs-nav-title">The Quiet App: Neurodivergent Focus</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>

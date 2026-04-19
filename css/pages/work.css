@@ -1,0 +1,57 @@
+/* Work index page */
+
+.work-hero {
+  padding: var(--space-20) 0 var(--space-12);
+}
+
+.work-grid {
+  padding-bottom: var(--space-20);
+}
+
+.work-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.work-card-link:hover .card-title {
+  color: var(--color-accent);
+}
+
+.work-card-cover {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--color-accent-subtle) 0%, var(--color-surface) 100%);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Color-coded covers per case study */
+.cover--onboarding {
+  background: linear-gradient(135deg, #EEF3EF 0%, #C8D9CA 100%);
+}
+.cover--analytics {
+  background: linear-gradient(135deg, #EEF0F8 0%, #C8CCE0 100%);
+}
+.cover--design-system {
+  background: linear-gradient(135deg, #F5EEF8 0%, #D9C8DF 100%);
+}
+.cover--accessibility {
+  background: linear-gradient(135deg, #FEF5E7 0%, #F0D9A8 100%);
+}
+.cover--civic {
+  background: linear-gradient(135deg, #EAF5FB 0%, #C2D9E8 100%);
+}
+.cover--quiet {
+  background: linear-gradient(135deg, #F9F0F5 0%, #E8C8D5 100%);
+}
+
+[data-theme="dark"] .cover--onboarding { background: linear-gradient(135deg, #1E2E20 0%, #2A3D2C 100%); }
+[data-theme="dark"] .cover--analytics  { background: linear-gradient(135deg, #1E2030 0%, #2A2D40 100%); }
+[data-theme="dark"] .cover--design-system { background: linear-gradient(135deg, #28202C 0%, #352840 100%); }
+[data-theme="dark"] .cover--accessibility { background: linear-gradient(135deg, #2C2414 0%, #3D3010 100%); }
+[data-theme="dark"] .cover--civic { background: linear-gradient(135deg, #182028 0%, #202C38 100%); }
+[data-theme="dark"] .cover--quiet { background: linear-gradient(135deg, #28181E 0%, #38202A 100%); }

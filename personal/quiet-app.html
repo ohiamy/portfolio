@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet App — Amy Wong, UX Designer</title>
+  <meta name="description" content="A focus productivity app designed for neurodivergent users — open-sourced on Figma Community with 1,200+ downloads.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/case-study.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="../work/index.html">Work</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Personal</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="../work/index.html">Work</a></li>
+    <li><a href="index.html">Personal</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <p class="cs-breadcrumb"><a href="index.html">Personal</a> <span aria-hidden="true">›</span> <span>The Quiet App</span></p>
+        <span class="cs-label">Personal Project · Inclusive Design · 2022</span>
+        <h1 class="cs-title">The Quiet App: Designing for Neurodivergent Focus</h1>
+        <p class="cs-summary">After my own ADHD diagnosis, I started noticing how most productivity apps pile on visual stimulation at exactly the wrong moment. The Quiet App is a focus tool designed from the ground up for minds that find noise — visual or otherwise — overwhelming.</p>
+        <dl class="cs-meta">
+          <div class="cs-meta-item"><dt>Type</dt><dd>Personal / Open Source</dd></div>
+          <div class="cs-meta-item"><dt>Timeline</dt><dd>12 weeks (2022)</dd></div>
+          <div class="cs-meta-item"><dt>Methods</dt><dd>Participatory Design, Iterative Prototyping</dd></div>
+          <div class="cs-meta-item"><dt>Tools</dt><dd>Figma, Maze, Notion</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <section class="cs-section" aria-labelledby="context-heading">
+        <span class="cs-section-label">Context</span>
+        <h2 id="context-heading">Starting from my own experience</h2>
+        <p>I was diagnosed with ADHD at 31. Looking back at every productivity system I'd tried — Pomodoro timers, task apps, habit trackers — they all shared a common problem: they were designed to motivate neurotypical users through streak counters, badges, progress bars, and notification systems. For me, those elements were distraction mechanisms, not motivation mechanisms.</p>
+        <p>I started designing The Quiet App as a personal project, then opened it up. I recruited 8 people with ADHD from online communities to participate in the research and design process — turning a personal project into a participatory one.</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="research-heading">
+        <span class="cs-section-label">Research</span>
+        <h2 id="research-heading">What ADHD users actually need from a focus tool</h2>
+        <p>I combined desk research (academic literature on ADHD and attention, UX writing on cognitive load) with 8 in-depth interviews with my participant group. I also ran 2-week diary studies with 4 participants, asking them to track when and why their existing tools failed them.</p>
+        <p>The core insight: the biggest barrier to focus for ADHD users isn't the absence of motivation — it's the presence of competing stimuli. A productivity app that shows me 47 tasks is an attention catastrophe, not a tool.</p>
+
+        <div class="cs-quote">
+          <p>"Every time I open my task app to find the one thing I should be doing, I get distracted by 12 other things I'm not doing. Then I feel bad and don't do anything."</p>
+          <cite>— Research participant</cite>
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="design-heading">
+        <span class="cs-section-label">Design Decisions</span>
+        <h2 id="design-heading">Principles that drove every choice</h2>
+        <ul>
+          <li><strong>One thing at a time:</strong> The app shows exactly one task — the one you've nominated as your current focus. Everything else is hidden until you ask for it.</li>
+          <li><strong>No gamification:</strong> No streaks, no badges, no leaderboards. The only feedback is "done" or "not done." Removing gamification removed the anxiety loop it created for participants.</li>
+          <li><strong>Low visual density:</strong> Maximum contrast between the focus item and the background. No color, no icons, no competing visual elements in the focus view.</li>
+          <li><strong>Flexible timers:</strong> Rather than a fixed 25-minute Pomodoro, users set their own "I can handle this much" duration — even if that's 5 minutes. No guilt about short sessions.</li>
+          <li><strong>Soft interruptions:</strong> Notifications are off by default. When a session ends, the transition is gentle — no alarms, no urgency cues.</li>
+        </ul>
+
+        <div class="img-placeholder" role="img" aria-label="App screens: single-task focus view (minimal, high contrast), flexible timer set screen, quiet session-end transition screen">
+          Image placeholder: Quiet App design screens
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="outcomes-heading">
+        <span class="cs-section-label">Outcomes</span>
+        <h2 id="outcomes-heading">What happened after I shared it</h2>
+        <p>I published the Figma file to Figma Community with a write-up of the design rationale. Within 6 months, it had been downloaded over 1,200 times. The comments section became a small community of ADHD designers and developers sharing their own variations.</p>
+        <p>Three developers have built partial implementations of the concept. I'm not planning to build it myself — this project was about the design process and giving something useful back to a community I belong to.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat"><span class="cs-stat-value">1,200+</span><span class="cs-stat-label">Figma Community downloads</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">3</span><span class="cs-stat-label">Independent developer implementations</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">8</span><span class="cs-stat-label">ADHD users in participatory design cohort</span></div>
+        </div>
+      </section>
+
+      <nav class="cs-nav" aria-label="Project navigation">
+        <a href="civic-tech.html" class="cs-nav-link">
+          <span class="cs-nav-dir">← Previous</span>
+          <span class="cs-nav-title">Neighborhood as Network</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Amy Wong, UX Designer</title>
+  <meta name="description" content="Amy Wong is a Lead UX Designer with 9 years of experience in enterprise product design and design systems.">
+  <link rel="canonical" href="https://ohiamy.github.io/hello-world/about.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/about.css">
+  <script src="js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="work/index.html">Work</a></li>
+          <li><a href="personal/index.html">Personal</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="work/index.html">Work</a></li>
+    <li><a href="personal/index.html">Personal</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="about-hero">
+        <span class="section-label">About</span>
+        <h1>The person behind the work</h1>
+      </div>
+      <div class="about-layout">
+        <!-- Photo -->
+        <div class="about-photo">
+          <div class="about-avatar" aria-label="Photo placeholder — initials AW" role="img">AW</div>
+          <p class="about-photo-caption">Amy Wong<br>Lead UX Designer</p>
+        </div>
+
+        <!-- Bio -->
+        <div class="about-bio">
+          <p>I'm a Lead UX Designer with 9 years of experience working on enterprise and B2B SaaS products. I specialize in complex workflow design, design systems, and research-led product development — with a particular focus on making powerful tools feel effortless for the people who use them every day.</p>
+          <p>I've spent most of my career at the intersection of design and engineering — the place where the interesting problems live. I believe the best design decisions are made by people who understand the technical constraints, the business goals, and the user's needs simultaneously. I aim to be that person in every project I join.</p>
+          <p>Outside of work, I run co-design sessions with civic tech groups, contribute to open-source design projects, and think about how design tools could do a better job of supporting neurodivergent practitioners. I'm ADHD and believe that designing for edge cases makes everything better for everyone.</p>
+
+          <h2>Design philosophy</h2>
+          <p>Good design is invisible in the right moments and expressive in the right moments. It doesn't call attention to itself — it calls attention to what the user needs to do next. I'm not interested in design for its own sake. I'm interested in design that changes how people work, how organizations function, and occasionally how people feel about themselves in relation to technology.</p>
+
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Research Methods</h3>
+              <ul>
+                <li>Moderated usability testing</li>
+                <li>Diary studies</li>
+                <li>Contextual inquiry</li>
+                <li>Co-design workshops</li>
+                <li>Survey design &amp; analysis</li>
+                <li>Eye-tracking studies</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Design Tools</h3>
+              <ul>
+                <li>Figma (advanced)</li>
+                <li>Prototyping &amp; interaction design</li>
+                <li>Storybook</li>
+                <li>Maze, UserTesting</li>
+                <li>Dovetail, Notion</li>
+                <li>HTML/CSS (proficient)</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Systems &amp; Strategy</h3>
+              <ul>
+                <li>Design token architecture</li>
+                <li>Component library design</li>
+                <li>Information architecture</li>
+                <li>Accessibility (WCAG 2.1 AA)</li>
+                <li>Design ops</li>
+                <li>Product strategy</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Leadership</h3>
+              <ul>
+                <li>Design system governance</li>
+                <li>Cross-functional facilitation</li>
+                <li>Stakeholder alignment</li>
+                <li>Design critique &amp; mentoring</li>
+                <li>Program management</li>
+                <li>OKR planning</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2>My process</h2>
+          <div class="process-steps" aria-label="Design process: Discover, Define, Design, Deliver">
+            <div class="process-step">
+              <div class="process-step-num" aria-hidden="true">1</div>
+              <p class="process-step-title">Discover</p>
+              <p class="process-step-desc">Research, observation, stakeholder interviews</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num" aria-hidden="true">2</div>
+              <p class="process-step-title">Define</p>
+              <p class="process-step-desc">Synthesis, framing, problem statements</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num" aria-hidden="true">3</div>
+              <p class="process-step-title">Design</p>
+              <p class="process-step-desc">Ideation, prototyping, validation</p>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num" aria-hidden="true">4</div>
+              <p class="process-step-title">Deliver</p>
+              <p class="process-step-desc">Handoff, implementation support, measurement</p>
+            </div>
+          </div>
+
+          <div style="margin-top:var(--space-10)">
+            <a href="contact.html" class="btn btn--primary">Get in touch</a>
+            <a href="resume.html" class="btn btn--outline" style="margin-left:var(--space-4)">View resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+</body>
+</html>
