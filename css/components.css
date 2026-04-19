@@ -16,10 +16,10 @@
   border-color: var(--color-border);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(250, 247, 240, 0.88);
+  background: var(--color-nav-scrolled);
 }
 [data-theme="dark"] .site-nav.scrolled {
-  background: rgba(28, 26, 24, 0.88);
+  background: var(--color-nav-scrolled);
 }
 
 .nav-inner {

@@ -3,6 +3,7 @@
 :root {
   /* Colors — Light theme */
   --color-bg: #FFFDFA;
+  --color-nav-scrolled: rgba(255, 253, 250, 0.88);
   --color-surface: #F2EDE3;
   --color-surface-elevated: #FFFFFF;
   --color-text-primary: #2C1A0E;
@@ -77,6 +78,7 @@
 
 [data-theme="dark"] {
   --color-bg: #1C1A18;
+  --color-nav-scrolled: rgba(28, 26, 24, 0.88);
   --color-surface: #252320;
   --color-surface-elevated: #2E2B27;
   --color-text-primary: #F5F0E8;
