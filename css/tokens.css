@@ -3,7 +3,7 @@
 :root {
   /* Colors — Light theme */
   --color-bg: #FFFDFA;
-  --color-nav-bg: #FFFDFA;
+  --color-nav-bg: #transparent;
   --color-nav-scrolled: #EBF0E088;
   --color-surface: #F8FAF3;
   --color-surface-elevated: #FFFFFF;
