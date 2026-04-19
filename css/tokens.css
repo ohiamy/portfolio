@@ -2,15 +2,15 @@
 
 :root {
   /* Colors — Light theme */
-  --color-bg: #FAF7F0;
+  --color-bg: #FFFDFA;
   --color-surface: #F2EDE3;
   --color-surface-elevated: #FFFFFF;
   --color-text-primary: #2C1A0E;
   --color-text-secondary: #6B5344;
   --color-text-muted: #9C8070;
-  --color-accent: #4A6B4F;
-  --color-accent-hover: #3A5540;
-  --color-accent-subtle: #EEF3EF;
+  --color-accent: #6E7F49;
+  --color-accent-hover: #5C6548;
+  --color-accent-subtle: #F2F3EE;
   --color-border: #E0D8CC;
   --color-on-accent: #FFFFFF;
   --color-error: #C0392B;
