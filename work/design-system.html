@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One Language — Amy Wong, UX Designer</title>
-  <meta name="description" content="How I built a token-based design system across 12 product teams at a Series C SaaS company.">
+  <title>[Project Title] — Amy Wong, UX Designer</title>
+  <meta name="description" content="[One sentence describing what you did and the headline outcome.]">
   <link rel="canonical" href="https://ohiamy.github.io/hello-world/work/design-system.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,71 +57,97 @@
     <div class="cs-hero">
       <div class="cs-hero-inner">
         <p class="cs-breadcrumb"><a href="index.html">Work</a> <span aria-hidden="true">›</span> <span>Design System</span></p>
-        <span class="cs-label">Orion SaaS · Series C · 2023</span>
-        <h1 class="cs-title">One Language: Building a Design System Across 12 Teams</h1>
-        <p class="cs-summary">Orion had 12 product teams, 3 codebases, and zero shared visual standards. I built a token-based design system from the ground up — reducing design-to-dev handoff time by 40% and achieving 100% team adoption within 6 months.</p>
+        <span class="cs-label">[Company or Client · Industry · Year]</span>
+        <h1 class="cs-title">[Project Title: A Short, Punchy Headline That Names What You Did]</h1>
+        <p class="cs-summary">[1–2 sentence project summary. Lead with the problem, then what you did, then the headline outcome. Example structure: "{Company} had {problem}. I {what you did} — resulting in {measurable outcome}."]</p>
         <dl class="cs-meta">
-          <div class="cs-meta-item"><dt>My Role</dt><dd>Design System Lead</dd></div>
-          <div class="cs-meta-item"><dt>Timeline</dt><dd>8 months (2023)</dd></div>
-          <div class="cs-meta-item"><dt>Team</dt><dd>3 Designers, 4 Engineers, 1 PM</dd></div>
-          <div class="cs-meta-item"><dt>Tools</dt><dd>Figma, Storybook, GitHub, Notion</dd></div>
+          <div class="cs-meta-item"><dt>My Role</dt><dd>[Your title or function on this project]</dd></div>
+          <div class="cs-meta-item"><dt>Timeline</dt><dd>[X months (Year)]</dd></div>
+          <div class="cs-meta-item"><dt>Team</dt><dd>[X Designers, X Engineers, X PMs]</dd></div>
+          <div class="cs-meta-item"><dt>Tools</dt><dd>[Tools you used — Figma, Notion, etc.]</dd></div>
         </dl>
       </div>
     </div>
 
     <div class="cs-body">
 
+      <!-- =====================================================
+           SECTION 1: OVERVIEW
+           Set the stage. Frame the problem, the context, and
+           why it mattered — to the business and to users.
+           ===================================================== -->
       <section class="cs-section" aria-labelledby="overview-heading">
         <span class="cs-section-label">Overview</span>
-        <h2 id="overview-heading">The cost of no shared standard</h2>
-        <p>Orion raised a Series C in 2022 and doubled engineering headcount. With growth came fragmentation: each of 12 product teams was designing and building independently. A component audit revealed over 400 unique components across the product — but only 60 distinct design patterns. The rest was duplication, variation, and inconsistency.</p>
-        <p>The business impact was significant: engineers were rebuilding the same UI components repeatedly, designers were spending hours pixel-matching across tools, and customers were experiencing jarring visual inconsistencies as they moved between product areas.</p>
+        <h2 id="overview-heading">[A headline that frames the core problem, not the solution]</h2>
+        <p>[Paragraph 1: Describe the situation. Who was affected, what was broken or missing, and how did it come to be that way? Give the reader enough context to understand why this problem needed solving.]</p>
+        <p>[Paragraph 2: Quantify the impact of the problem. What was at stake — for users, for the business, for the team? This is where you make the reader care about the outcome.]</p>
 
         <div class="cs-stats">
-          <div class="cs-stat"><span class="cs-stat-value">400+</span><span class="cs-stat-label">Unique components across the product before the audit</span></div>
-          <div class="cs-stat"><span class="cs-stat-value">60</span><span class="cs-stat-label">Distinct design patterns those 400 components actually represented</span></div>
-          <div class="cs-stat"><span class="cs-stat-value">3</span><span class="cs-stat-label">Separate codebases with no shared component library</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[A key baseline metric that shows the scale or severity of the problem]</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[A second dimension of the problem — user impact, business risk, or scope]</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[A third stat that adds context — team size, time pressure, or constraint]</span></div>
         </div>
       </section>
 
+      <!-- =====================================================
+           SECTION 2: RESEARCH / DISCOVERY
+           Show your thinking before your making. What did you
+           do to understand the problem? What did you learn?
+           ===================================================== -->
       <section class="cs-section" aria-labelledby="research-heading">
-        <span class="cs-section-label">Discovery</span>
-        <h2 id="research-heading">Understanding the ecosystem</h2>
-        <p>Before designing anything, I ran a 3-week discovery phase: 24 stakeholder interviews across design, engineering, and product leadership; a full component audit using a custom Figma plugin; and a survey of all 12 teams to understand their current workflow pain points.</p>
-        <p>The interviews revealed that adoption would be the hardest challenge — not the system itself. Teams had tried to rally around shared standards before and failed. The trust had to be rebuilt, and the system had to demonstrably make their work easier, not just tell them to use it.</p>
+        <span class="cs-section-label">Research</span>
+        <h2 id="research-heading">[What you set out to understand]</h2>
+        <p>[Describe your research approach: what methods you used, how many participants, over what timeframe, and why you chose those methods for this specific problem. Be specific — "I ran 12 user interviews" is stronger than "I did user research."]</p>
+        <p>[Share your key insight or finding. What did you learn that wasn't obvious at the start? This should connect directly to the design decisions you made. Avoid listing findings as bullet points — write the most important one as a clear, memorable sentence.]</p>
 
         <div class="cs-quote">
-          <p>"Every time someone proposes a shared component library, it dies because it doesn't match what we actually need. We've learned not to trust it."</p>
-          <cite>— Senior Engineer, Orion Growth team</cite>
+          <p>"[A direct quote from a user, stakeholder, or research participant that captures a key insight or pain point in their own words.]"</p>
+          <cite>— [Role or description of who said it, without using their real name]</cite>
+        </div>
+
+        <div class="img-placeholder" role="img" aria-label="[Describe what this image shows — e.g., affinity map from research synthesis, journey map with annotated pain points]">
+          Image placeholder: [Research artifact — affinity map, journey map, survey results, etc.]
         </div>
       </section>
 
+      <!-- =====================================================
+           SECTION 3: DESIGN PROCESS
+           Show how you moved from insight to solution.
+           Decisions, tradeoffs, iterations — not just outputs.
+           ===================================================== -->
       <section class="cs-section" aria-labelledby="process-heading">
         <span class="cs-section-label">Design Process</span>
-        <h2 id="process-heading">Building trust, not just components</h2>
-        <p>I took a federated model rather than a centralized mandate. The design system team (myself + 2 engineers) built the foundation — tokens, core components, documentation — but each product team had a designated "system ambassador" who sat in on design reviews and contributed team-specific patterns back to the library.</p>
+        <h2 id="process-heading">[How you approached the solution]</h2>
+        <p>[Describe your process at a high level: did you run a design sprint? Prototype and test? Work iteratively with engineers? Frame the overall approach before getting into specifics. Explain why you approached it this way.]</p>
+        <p>[Describe a key decision or tradeoff you made. What options did you consider, and why did you go the direction you did? This is what separates a thoughtful designer from someone who just executes.]</p>
 
         <ul>
-          <li><strong>Design tokens first:</strong> We started with a complete token set (color, typography, spacing, radius, elevation) before touching a single component. This gave teams immediate value — they could adopt tokens even before the component library was ready.</li>
-          <li><strong>Figma library + Storybook parity:</strong> Every component existed in both Figma and code simultaneously. We enforced this with a PR requirement: no Figma updates without a corresponding Storybook PR, and vice versa.</li>
-          <li><strong>Documentation as a first-class deliverable:</strong> Each component had a dedicated doc page: usage guidelines, do/don't examples, prop documentation, and accessibility notes. No component shipped without it.</li>
-          <li><strong>Pilot team approach:</strong> We launched with 2 willing teams, incorporated their feedback for 6 weeks, then expanded to the full 12. This built advocates before the mandate.</li>
+          <li><strong>[Decision or intervention #1]:</strong> [Explain what you did and why. Connect it to a specific insight from your research or a specific constraint you were working within.]</li>
+          <li><strong>[Decision or intervention #2]:</strong> [Explain what you did and why. Be specific about the outcome you were designing for.]</li>
+          <li><strong>[Decision or intervention #3]:</strong> [Explain what you did and why. If you tested or validated this decision, mention it here.]</li>
+          <li><strong>[Decision or intervention #4 — optional]:</strong> [Add a fourth if it meaningfully adds to the story. Remove this if you only have three.]</li>
         </ul>
 
-        <div class="img-placeholder" role="img" aria-label="Design token structure diagram showing primitive tokens (raw values) → semantic tokens (purpose-based) → component tokens (specific usage)">
-          Image placeholder: Token architecture diagram
+        <div class="img-placeholder" role="img" aria-label="[Describe what this image shows — e.g., wireframe progression from sketches to mid-fidelity, comparison of two design directions]">
+          Image placeholder: [Process artifact — wireframes, sketches, concept explorations, before/after, etc.]
         </div>
       </section>
 
+      <!-- =====================================================
+           SECTION 4: OUTCOMES
+           Lead with the numbers. Follow with the broader
+           impact and what you personally learned.
+           ===================================================== -->
       <section class="cs-section" aria-labelledby="outcomes-heading">
         <span class="cs-section-label">Outcomes</span>
-        <h2 id="outcomes-heading">Results at 6 months</h2>
+        <h2 id="outcomes-heading">[Results — be specific about when you measured and what changed]</h2>
         <div class="cs-stats">
-          <div class="cs-stat"><span class="cs-stat-value">100%</span><span class="cs-stat-label">Team adoption across all 12 product teams within 6 months</span></div>
-          <div class="cs-stat"><span class="cs-stat-value">−40%</span><span class="cs-stat-label">Design-to-dev handoff time (measured via project tracking)</span></div>
-          <div class="cs-stat"><span class="cs-stat-value">340+</span><span class="cs-stat-label">Duplicate components eliminated from the product codebase</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[Primary outcome metric — the most important measurable result]</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[Secondary outcome — another dimension of success]</span></div>
+          <div class="cs-stat"><span class="cs-stat-value">[#]</span><span class="cs-stat-label">[Third outcome — adoption, retention, satisfaction, or business impact]</span></div>
         </div>
-        <p>The system now has 87 components, 1,200+ token definitions, and a contribution guide that enables product teams to propose and ship new components independently. The federated model created a sense of shared ownership — rather than the system being something imposed on teams, it became something teams actively contribute to.</p>
+        <p>[1–2 sentences on the broader impact beyond the numbers. What changed for the team, the product, or the company as a result of this work?]</p>
+        <p>[Optional: What did you learn or what would you do differently? A brief reflection shows self-awareness and growth. Keep it genuine — avoid generic lessons like "I learned the importance of user research."]</p>
       </section>
 
       <nav class="cs-nav" aria-label="Case study navigation">
