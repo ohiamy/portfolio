@@ -55,3 +55,7 @@
 [data-theme="dark"] .cover--accessibility { background: linear-gradient(135deg, #2C2414 0%, #3D3010 100%); }
 [data-theme="dark"] .cover--civic { background: linear-gradient(135deg, #182028 0%, #202C38 100%); }
 [data-theme="dark"] .cover--quiet { background: linear-gradient(135deg, #28181E 0%, #38202A 100%); }
+.cover--gudetama {
+  background: linear-gradient(135deg, #FEFCE8 0%, #F5E398 100%);
+}
+[data-theme="dark"] .cover--gudetama { background: linear-gradient(135deg, #2E2C14 0%, #3D3810 100%); }

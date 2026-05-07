@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gudetama Tamagotchi — Amy Wong, UX Designer</title>
+  <meta name="description" content="A stress-relieving browser/desktop app prototype built with Figma Make, featuring original Gudetama illustrations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/case-study.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="../work/index.html">Work</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Personal</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="../work/index.html">Work</a></li>
+    <li><a href="index.html">Personal</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <p class="cs-breadcrumb"><a href="index.html">Personal</a> <span aria-hidden="true">›</span> <span>Gudetama Tamagotchi</span></p>
+        <span class="cs-label">Hobby Project · Figma Make · Q4 2025</span>
+        <h1 class="cs-title">Gudetama Tamagotchi: A Stress-Relieving Desktop Companion</h1>
+        <p class="cs-summary">A browser and desktop app prototype built entirely with Figma Make — featuring original illustrations I drew myself. Born from a stressful quarter at work and a curiosity about what Figma Make could actually do.</p>
+        <dl class="cs-meta">
+          <div class="cs-meta-item"><dt>Type</dt><dd>Hobby / For Fun</dd></div>
+          <div class="cs-meta-item"><dt>Timeline</dt><dd>Q4 2025</dd></div>
+          <div class="cs-meta-item"><dt>Methods</dt><dd>Iterative Prototyping, AI-assisted Prompting</dd></div>
+          <div class="cs-meta-item"><dt>Tools</dt><dd>Figma, Figma Make, Databricks AI</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <section class="cs-section" aria-labelledby="context-heading">
+        <span class="cs-section-label">Context</span>
+        <h2 id="context-heading">Figma Make access + a stressful quarter = Gudetama</h2>
+        <p>When we got access to Figma Make at work, I knew I wanted to explore it — but I didn't want my first experiment to be something high-stakes. I wanted to play. And honestly, work had been exhausting, so the project had a personal brief from the start: build something that makes me feel better just by looking at it.</p>
+        <p>Gudetama — Sanrio's notoriously lazy egg yolk who can't be bothered to face the day — felt like the perfect muse. A tiny desktop companion that asks almost nothing of you and just vibes. It's basically stress relief with a face.</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="process-heading">
+        <span class="cs-section-label">Process</span>
+        <h2 id="process-heading">Drawing first, building second</h2>
+        <p>I started in Figma — not prototyping, just drawing. I created all the illustrations and image assets from scratch: Gudetama in various lazy states, expressions for different interactions, background elements. Getting the look right before touching Figma Make meant I had a visual language to build toward, rather than retrofitting assets into whatever the prototype happened to become.</p>
+        <p>For the Figma Make side, I worked with Databricks AI to help craft and refine my prompts. AI-assisted prompting was new territory for me, and having a sounding board to pressure-test my descriptions helped me communicate intent more precisely than I would have on my own.</p>
+        <p>From there it was genuinely iterative — I'd add a feature, realize it needed a new asset, go back to Figma to draw it, then bring it back in. The loop felt natural, almost like how I'd develop a design system incrementally, except the deliverable was a tiny lazy egg who sighs when you poke him.</p>
+
+        <div class="img-placeholder" role="img" aria-label="Illustration assets: Gudetama in various resting states and expressions, drawn in Figma">
+          Image placeholder: Custom Gudetama illustration assets
+        </div>
+      </section>
+
+      <section class="cs-section" aria-labelledby="reflection-heading">
+        <span class="cs-section-label">Reflection</span>
+        <h2 id="reflection-heading">What I was actually testing</h2>
+        <p>This was a tool exploration as much as a design project. I wanted to understand Figma Make's ceiling — what kind of interactivity could I get from prompts alone, and where did I need to be more directive? The answer turned out to be: it handles a surprising amount if your prompts are specific, and it falls apart quickly if they're vague. Pairing it with Databricks AI to sharpen my language before sending prompts made a real difference.</p>
+        <p>There's also something worth noting about the illustration work. I don't often get to do purely expressive visual design in my day-to-day — most of my work is systems and flows and research. Drawing Gudetama being deeply unbothered was a nice reminder that I enjoy it, and that loosening up visually makes me a better designer overall.</p>
+      </section>
+
+      <section class="cs-section" aria-labelledby="outcomes-heading">
+        <span class="cs-section-label">Outcomes</span>
+        <h2 id="outcomes-heading">Did it work?</h2>
+        <p>As a stress reliever: yes. As a Figma Make experiment: also yes. The prototype ended up functional enough to actually use — a little interactive desktop companion that does exactly what it says on the tin.</p>
+        <p>The reception from people who saw it was warm. "Cute" was the word I heard most, which was exactly the goal. Sometimes the right KPI is just: does this make someone smile?</p>
+      </section>
+
+      <nav class="cs-nav" aria-label="Project navigation">
+        <a href="quiet-app.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-dir">Next →</span>
+          <span class="cs-nav-title">The Quiet App: Neurodivergent Focus</span>
+        </a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+</body>
+</html>
