@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One Place to See It All: PEO Tax Dashboard — Amy Wong, UX Designer</title>
+  <meta name="description" content="I designed a 0-to-1 dashboard that consolidated scattered data from three disconnected systems into a single, persona-driven workspace for ADP's Tax Business Partners.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/case-study.css">
+  <script src="../js/theme.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Password gate overlay — removed by auth.js on correct entry -->
+  <div id="auth-overlay" role="dialog" aria-modal="true" aria-label="Password protected content" tabindex="-1">
+    <div class="auth-box">
+      <div class="auth-lock" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+      </div>
+      <h2>NDA Protected</h2>
+      <p>This case study contains confidential internal work from ADP. Enter the password to view — available to hiring managers on request.</p>
+      <form id="auth-form" novalidate>
+        <label for="auth-password" class="sr-only">Password</label>
+        <input id="auth-password" type="password" placeholder="Enter password" autocomplete="current-password" required>
+        <p id="auth-error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="btn btn--primary">Unlock case study</button>
+      </form>
+      <a href="index.html" class="auth-back-link">← Back to Work</a>
+    </div>
+  </div>
+
+  <header class="site-nav" role="banner">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Amy Wong</a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Work</a></li>
+          <li><a href="../personal/index.html">Personal</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../resume.html">Resume</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div style="display:flex;align-items:center;gap:var(--space-3)">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode">
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation">
+    <button id="mobile-nav-close" class="mobile-nav-close" aria-label="Close menu">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <li><a href="index.html">Work</a></li>
+    <li><a href="../personal/index.html">Personal</a></li>
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../resume.html">Resume</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </nav>
+
+  <main id="main-content">
+    <div class="cs-hero">
+      <div class="cs-hero-inner">
+        <p class="cs-breadcrumb">
+          <a href="index.html">Work</a>
+          <span aria-hidden="true">›</span>
+          <span>PEO Tax Dashboard</span>
+        </p>
+        <span class="cs-label">ADP · Internal Tool · 2025–2026</span>
+        <h1 class="cs-title">One Place to See It All: Designing the PEO Tax Dashboard</h1>
+        <p class="cs-summary">Tax Business Partners at ADP TotalSource were navigating three or more disconnected systems to manage client tax health — with no unified view and real compliance consequences when things fell through the cracks. I designed a 0-to-1 dashboard that consolidated scattered data into a single, persona-driven workspace.</p>
+        <dl class="cs-meta">
+          <div class="cs-meta-item">
+            <dt>My Role</dt>
+            <dd>Lead UX Designer<br>Sole designer</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt>Timeline</dt>
+            <dd>~4 quarters<br>Jun 2025 – Jun 2026</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt>Team</dt>
+            <dd>1 UX Content (pt)<br>1 UX Researcher<br>2 PMs · 7+ Engineers</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt>Tools</dt>
+            <dd>Figma<br>Confluence · Jira</dd>
+          </div>
+          <div class="cs-meta-item">
+            <dt>Status</dt>
+            <dd>In development<br>Launching Jun 2026</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="cs-body">
+
+      <!-- OVERVIEW -->
+      <section class="cs-section" aria-labelledby="overview-heading">
+        <span class="cs-section-label">Overview</span>
+        <h2 id="overview-heading">Three systems, zero visibility, real compliance stakes</h2>
+        <p>ADP's HRO TotalSource division manages payroll and tax compliance on behalf of PEO clients — businesses that have fully outsourced their HR operations. This means when a client's tax profile has an issue, it's ADP's responsibility to catch and resolve it. This project was a collaboration between the HRO business unit and ADP's Compliance Solutions tax team, who own the OneTax platform the dashboard would live within.</p>
+        <p>The associates responsible for this work — Tax Business Partners, a role being newly established alongside this project — had no unified place to work. To handle a single client issue, they moved across multiple disconnected systems: a ticketing system, email, or WebEx to receive work; HENRY (a Salesforce tool) to look up client details; and SUI Tool or CoreTax to check tax registration and profile status. There was no single view of a client's tax health, and no structure for prioritizing what needed attention. Missed or delayed action on tax profile issues could result in improper filings — triggering Penalties &amp; Interest for PEO clients. For a business unit whose entire value proposition is handling compliance so clients don't have to, that's a direct failure of the service promise.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-value">3+</span>
+            <span class="cs-stat-label">Disconnected systems associates had to navigate for a single client issue</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">11</span>
+            <span class="cs-stat-label">Tax jurisdictions requiring employer notification — each with different rules</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">0→1</span>
+            <span class="cs-stat-label">No prior unified dashboard existed; this was designed entirely from scratch</span>
+          </div>
+        </div>
+
+        <div class="img-placeholder" role="img" aria-label="System map showing the three or more tools Tax Business Partners used before this dashboard — HENRY, SUI Tool or CoreTax, and a ticketing system or email — with arrows illustrating context-switching between them">
+          Image placeholder: Before-state system map — the fragmented tool landscape associates navigated prior to this dashboard
+        </div>
+      </section>
+
+      <!-- RESEARCH & DISCOVERY -->
+      <section class="cs-section" aria-labelledby="research-heading">
+        <span class="cs-section-label">Research &amp; Discovery</span>
+        <h2 id="research-heading">Understanding how Tax Business Partners actually think</h2>
+        <p>Discovery on this project was unconventional. Rather than a defined research phase, insights emerged through months of weekly stakeholder meetings — a process that required active effort to make productive. I pushed for specificity: asking stakeholders to show us the actual tools they used, name the exact data points they cared about, and react to low-fidelity wireframes rather than describe needs in the abstract.</p>
+        <p>A secondary constraint was that the Tax Business Partner role was being newly created alongside the tool itself. There were no existing users to observe — only business leaders describing what the role should do, and a small group of future associates who participated in concept reviews once initial designs were ready.</p>
+
+        <div class="cs-quote">
+          <p>"Associates weren't thinking like tax operations teams. Tax operations thinks in jurisdictions — how many clients across California are missing tax IDs. Tax Business Partners think in clients — what's wrong with this specific client, and what do I need to do about it."</p>
+          <cite>— Key insight surfaced through stakeholder discovery</cite>
+        </div>
+
+        <p>That distinction drove the entire information architecture of the dashboard. Organizing data around "clients with issues" rather than "issues by state" was the decision that made everything else click into place.</p>
+
+        <div class="img-placeholder" role="img" aria-label="Early hand-drawn wireframe showing the initial filter bar and widget layout concept, used as a discovery tool in stakeholder sessions">
+          Image placeholder: Early low-fidelity wireframe used for discovery — sketched filter bar and widget layout
+        </div>
+      </section>
+
+      <!-- DESIGN PROCESS -->
+      <section class="cs-section" aria-labelledby="process-heading">
+        <span class="cs-section-label">Design Process</span>
+        <h2 id="process-heading">Designing in flux, with two teams and shifting requirements</h2>
+        <p>This project had no clean research-then-design sequence. Requirements were actively in flux throughout — with daily meetings, two product teams with misaligned engagement (the TotalSource PM was present from the start; the OneTax PM didn't engage meaningfully until December 2025), and a user persona that was being defined in parallel with the product itself. I was the sole designer bridging both organizational teams.</p>
+        <p>My approach was iterative and pragmatic: use low-fidelity wireframes as a discovery tool early on, establish the core IA model quickly, and refine through ongoing stakeholder review. Formal concept testing with future Tax Business Partners happened later in the process, once there was enough definition to react to.</p>
+
+        <ul>
+          <li><strong>Client-centric information architecture:</strong> Once I understood that associates think in clients rather than jurisdictions, I structured the entire dashboard around that mental model. The hierarchy became: summary widgets (what needs my attention?) → filtered client list (which clients?) → client profile detail (what exactly is wrong?). Every data point on the dashboard is an entry point into a scoped client view.</li>
+          <li><strong>Widget-based dashboard with drill-through navigation:</strong> Rather than a flat list of all clients and issues, I designed summary widgets that surface counts by category — client tax health (Critical / At Risk / On Track), missing tax IDs and authorizations, open cases by type, open filing issues. Each widget is clickable and filters the client list below, letting associates triage at a glance before diving in.</li>
+          <li><strong>Countdown to quarter-end (proactive, unrequested):</strong> I added a countdown widget — "X days until end of quarter. Resolve issues to prevent penalties and interest." — that wasn't in any requirements document. I included it because the P&amp;I risk is time-sensitive, and associates needed to feel the urgency of their work surfaced in the tool itself. It got strong positive feedback from stakeholders in review.</li>
+          <li><strong>Plain-language status definitions:</strong> Working with the UX content writer and business stakeholders, I pushed for human-readable status labels with explicit definitions rather than color-coded icons alone. "Critical: Filing missed for prior closed quarter but wages were paid." gives an associate immediate context without having to look up what the status means.</li>
+        </ul>
+
+        <div class="img-placeholder" role="img" aria-label="Side-by-side comparison: hand-drawn wireframe of the filter bar and widget layout alongside the final high-fidelity Figma design of the dashboard">
+          Image placeholder: Early wireframe vs. final design — the full arc from rough discovery thinking to polished output
+        </div>
+
+        <h3 style="font-size:var(--text-lg);margin:var(--space-8) 0 var(--space-4);color:var(--color-text-primary)">Constraints and tradeoffs</h3>
+        <p>Not everything made it into MVP. The filter system was a point of ongoing tension throughout the project — I designed a robust, multi-select filter bar (Tax Business Partner, Client ID, Branch, Company Code, Jurisdiction, Client Status) aligned with the standardized filter pattern I had contributed to for the OneTax platform. Engineering scoped it down for the first release, deferring the full implementation to a later phase. The MVP ships with a simplified filter approach; the more intentional system is planned for post-launch.</p>
+
+        <div class="img-placeholder" role="img" aria-label="Comparison showing the full intended multi-select filter bar design in Figma alongside the simplified filter approach shipping in MVP">
+          Image placeholder: Filter design comparison — intended vs. MVP scope
+        </div>
+      </section>
+
+      <!-- SOLUTION -->
+      <section class="cs-section" aria-labelledby="solution-heading">
+        <span class="cs-section-label">Solution</span>
+        <h2 id="solution-heading">A unified dashboard built around how Tax Business Partners actually work</h2>
+        <p>The PEO Tax Dashboard gives Tax Business Partners a single, role-specific workspace within ADP's OneTax platform. On arrival, associates see a summary of everything that needs their attention — organized by client health status, missing registrations and authorizations, open tax cases, and filing issues — with counts that link directly to a filtered client list.</p>
+        <p>From the dashboard, associates can drill into a filtered client list scoped to whatever they clicked — for example, all clients with a "Critical" tax health status — and from there into a full client profile page with all relevant tax details. The flow is: orient → triage → act, without ever leaving the product or opening another tool. The quarter-end countdown widget makes time pressure explicit and connects daily work to the compliance outcome that matters most: avoiding Penalties &amp; Interest for PEO clients.</p>
+
+        <div class="img-placeholder" role="img" aria-label="Final high-fidelity Figma design of the full PEO Tax Dashboard, showing summary widgets for client tax health, missing tax IDs, open cases, and the quarter-end countdown">
+          Image placeholder: Final dashboard design — full view (hero screen)
+        </div>
+
+        <div class="img-placeholder" role="img" aria-label="Client list view filtered to Critical status clients after clicking through from the corresponding dashboard widget, showing the drill-through navigation model">
+          Image placeholder: Client list view — filtered state after drill-through from a dashboard widget
+        </div>
+
+        <div class="img-placeholder" role="img" aria-label="Client profile detail page showing the third level of the dashboard hierarchy — all relevant tax details for a single client">
+          Image placeholder: Client profile detail page — third level of the orient → triage → act hierarchy (in progress)
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="cs-section" aria-labelledby="outcomes-heading">
+        <span class="cs-section-label">Outcomes</span>
+        <h2 id="outcomes-heading">Launching June 2026 — designed to replace the spreadsheet and the context-switching</h2>
+        <p>The dashboard is currently in development and launching in June 2026. Measurable outcomes will be tracked post-launch, but the designed-for outcomes are clear: reduce the number of systems Tax Business Partners need to access in their daily workflow, surface compliance risk proactively before quarter-end, and give a newly-created role a purpose-built tool rather than a collection of workarounds.</p>
+
+        <div class="cs-stats">
+          <div class="cs-stat">
+            <span class="cs-stat-value">3+→1</span>
+            <span class="cs-stat-label">Systems consolidated into a single dashboard for Tax Business Partners</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">Jun '26</span>
+            <span class="cs-stat-label">Phase 1 launch — profile maintenance associates as the first persona</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat-value">Multi-phase</span>
+            <span class="cs-stat-label">Dashboard designed to scale to additional tax personas post-launch</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- REFLECTION -->
+      <section class="cs-section" aria-labelledby="reflection-heading">
+        <span class="cs-section-label">Reflection</span>
+        <h2 id="reflection-heading">What I'd do differently</h2>
+        <p>The hardest part of this project wasn't the design — it was the conditions around it. Designing as the sole designer across two organizational teams, with requirements in flux throughout and a user persona that was being defined in real time, meant that structure had to come from me when it didn't come from the process.</p>
+        <p>If I could change one thing: I would have pushed earlier for a shared definition of the Tax Business Partner role across both PMs before touching Figma. The client-centric vs. jurisdiction-centric insight was crucial, and it took longer to surface than it should have because the two teams had subtly different assumptions about who this tool was for.</p>
+        <p>The filter implementation gap is the thing I'd want to revisit post-launch. The standardized OneTax filter pattern exists for good reasons — consistency, learnability, reduced engineering overhead — and I'd advocate for closing that gap in phase 2.</p>
+      </section>
+
+      <!-- Next/Prev -->
+      <nav class="cs-nav" aria-label="Case study navigation">
+        <a href="enterprise-onboarding.html" class="cs-nav-link">
+          <span class="cs-nav-dir">← Previous</span>
+          <span class="cs-nav-title">From Chaos to Clarity: Enterprise Onboarding</span>
+        </a>
+        <a href="design-system.html" class="cs-nav-link cs-nav-link--next">
+          <span class="cs-nav-dir">Next →</span>
+          <span class="cs-nav-title">One Language: Design System</span>
+        </a>
+      </nav>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-copy">&copy; 2026 Amy Wong. All rights reserved.</p>
+      <nav class="footer-links" aria-label="Social links">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a><!-- TODO -->
+        <a href="#" aria-label="Dribbble">Dribbble</a><!-- TODO -->
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../js/nav.js"></script>
+  <script src="../js/auth.js"></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 // Default password: portfolio2024 — replace hash below to change it.
 
 var PAGE_AUTH = {
-  hash: 'e191cdbf5bb9d55705f93723ddb61646823e72c051db47ead5dbf7446b1d0297',
+  hash: '2332f0ee81cbce0ce1acaa6deff7e304ad56eae767046c81560cae75d0c5bca1',
   storageKey: 'analytics_authed'
 };
 
