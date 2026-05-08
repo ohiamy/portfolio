@@ -1,0 +1,60 @@
+/* Scrollspy sidebar navigation for case study pages */
+
+/* Offset section headings so the fixed nav doesn't cover them on click */
+section[id] {
+  scroll-margin-top: calc(var(--nav-height, 64px) + 1.5rem);
+}
+
+.scrollspy-nav {
+  position: fixed;
+  top: calc(var(--nav-height, 64px) + 2.5rem);
+  left: max(0.5rem, calc(50% - 370px - 9.5rem));
+  width: 8.5rem;
+  z-index: 40;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+
+.scrollspy-nav--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 767px) {
+  .scrollspy-nav { display: none; }
+}
+
+.scrollspy-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.scrollspy-nav a {
+  display: block;
+  padding: 0.3rem 0.625rem;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.6875rem;
+  font-weight: var(--weight-medium, 500);
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--color-text-muted, #999);
+  border-left: 2px solid transparent;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.scrollspy-nav a:hover {
+  color: var(--color-text-secondary, #555);
+}
+
+.scrollspy-nav a.is-active {
+  color: var(--color-accent, #6e7f49);
+  border-left-color: var(--color-accent, #6e7f49);
+  font-weight: var(--weight-semibold, 600);
+}
