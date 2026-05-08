@@ -1,3 +1,4 @@
 node_modules/
 .DS_Store
 .claude/
+personal/gudetama-app/dist/
