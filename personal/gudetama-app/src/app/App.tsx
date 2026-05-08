@@ -18,7 +18,18 @@ interface Stats {
   health: number;
 }
 
+function useCharacterSize() {
+  const [size, setSize] = useState(() => Math.min(340, Math.round(window.innerHeight * 0.36)));
+  useEffect(() => {
+    const update = () => setSize(Math.min(340, Math.round(window.innerHeight * 0.36)));
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
+  return size;
+}
+
 export default function App() {
+  const characterSize = useCharacterSize();
   const [stats, setStats] = useState<Stats>({
     hunger: 80,
     happiness: 70,
@@ -169,7 +180,7 @@ export default function App() {
   };
 
   return (
-    <div className="size-full flex items-center justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4 relative">
+    <div className="min-h-full w-full overflow-y-auto flex items-start justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4 relative">
       {/* Decorative stars scattered on outer background */}
       <DecorativeStars />
       
@@ -217,26 +228,26 @@ export default function App() {
         ))}
       </AnimatePresence>
       
-      <Card 
-        className="w-full max-w-2xl p-6 pb-10 relative overflow-visible"
-        style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%' }}
+      <Card
+        className="w-full max-w-2xl relative overflow-visible"
+        style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%', padding: 'clamp(12px, 2vh, 24px) clamp(12px, 2vw, 24px) clamp(20px, 3vh, 40px)' }}
       >
-        <div className="text-center -mb-2 -mt-4 relative z-10">
+        <div className="text-center -mb-2 relative z-10">
           <div className="mb-0 flex justify-center">
-            <img 
-              src={gudetamaLogo} 
-              alt="Gudetama" 
-              className="h-32"
+            <img
+              src={gudetamaLogo}
+              alt="Gudetama"
+              style={{ height: 'clamp(64px, 10vh, 128px)' }}
             />
           </div>
         </div>
 
         {/* Character Display */}
-        <div 
-          className="relative flex justify-center items-center mb-12 bg-gradient-to-b from-amber-50 to-yellow-100 mx-auto w-[71.5%]"
-          style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%', padding: '24px', height: '281.6px', overflow: 'visible' }}
+        <div
+          className="relative flex justify-center items-center bg-gradient-to-b from-amber-50 to-yellow-100 mx-auto w-[71.5%]"
+          style={{ borderRadius: '50% 50% 50% 50% / 60% 60% 40% 40%', padding: 'clamp(12px, 2vh, 24px)', height: `clamp(160px, 36vh, 281.6px)`, overflow: 'visible', marginBottom: 'clamp(20px, 4vh, 48px)' }}
         >
-          <GudetamaCharacter mood={mood} size={340} onPoke={handlePoke} />
+          <GudetamaCharacter mood={mood} size={characterSize} onPoke={handlePoke} />
           
           {/* Rain shower effect */}
           <RainShower isActive={isShowering} />
@@ -293,7 +304,7 @@ export default function App() {
         </div>
 
         {/* Stats with Action Buttons */}
-        <div className="content-stretch flex flex-col gap-[36px] items-start w-[55%] mx-auto -mt-6">
+        <div className="content-stretch flex flex-col items-start w-[55%] mx-auto -mt-6" style={{ gap: 'clamp(14px, 3vh, 36px)' }}>
           <StatBarWithButton
             icon={Utensils}
             label="Hunger"
