@@ -180,7 +180,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-full w-full overflow-y-auto flex items-start justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4 relative">
+    <div className="min-h-screen w-full overflow-y-auto flex items-start justify-center bg-gradient-to-br from-yellow-50 to-orange-50 p-4 relative">
       {/* Decorative stars scattered on outer background */}
       <DecorativeStars />
       
