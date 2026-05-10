@@ -141,5 +141,5 @@ main {
 
 @media (max-width: 480px) {
   h1 { font-size: calc(var(--text-2xl) * 1.1); }
-  .container { padding: 0 var(--space-4); }
+  .container { padding: 0 var(--space-5); }
 }
