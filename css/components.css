@@ -103,16 +103,30 @@
 /* Hamburger */
 .hamburger {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
   padding: var(--space-2);
   color: var(--color-text-primary);
+  width: 40px;
+  height: 40px;
 }
-.hamburger svg { width: 24px; height: 24px; }
-.hamburger .icon-close { display: none; }
-.hamburger[aria-expanded="true"] .icon-menu { display: none; }
-.hamburger[aria-expanded="true"] .icon-close { display: block; }
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transform-origin: center;
+  transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.2s ease;
+}
+.hamburger[aria-expanded="true"] .bar-top { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] .bar-mid { opacity: 0; transform: scaleX(0); }
+.hamburger[aria-expanded="true"] .bar-bot { transform: translateY(-7px) rotate(-45deg); }
 
 /* Mobile nav overlay */
 .mobile-nav {
