@@ -12,24 +12,34 @@ document.addEventListener('DOMContentLoaded', function () {
   // Mobile nav toggle
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
-  const mobileClose = document.getElementById('mobile-nav-close');
 
   function openMobileNav() {
     if (!mobileNav) return;
     mobileNav.classList.add('open');
     document.body.style.overflow = 'hidden';
-    if (mobileClose) mobileClose.focus();
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close menu');
+    }
   }
 
   function closeMobileNav() {
     if (!mobileNav) return;
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
-    if (hamburger) hamburger.focus();
+    if (hamburger) {
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open menu');
+      hamburger.focus();
+    }
   }
 
-  if (hamburger) hamburger.addEventListener('click', openMobileNav);
-  if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
+  if (hamburger) {
+    hamburger.addEventListener('click', function () {
+      if (mobileNav.classList.contains('open')) closeMobileNav();
+      else openMobileNav();
+    });
+  }
 
   // Close on link click
   if (mobileNav) {
