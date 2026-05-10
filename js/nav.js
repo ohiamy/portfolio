@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!mobileNav) return;
     mobileNav.classList.add('open');
     document.body.style.overflow = 'hidden';
+    if (hamburger) hamburger.style.visibility = 'hidden';
     if (mobileClose) mobileClose.focus();
   }
 
@@ -25,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!mobileNav) return;
     mobileNav.classList.remove('open');
     document.body.style.overflow = '';
+    if (hamburger) hamburger.style.visibility = '';
     if (hamburger) hamburger.focus();
   }
 
